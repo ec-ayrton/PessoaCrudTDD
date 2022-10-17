@@ -1,9 +1,11 @@
-package com.ayrton.crud.model;
+package com.ayrton.pessoacrud.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Getter
 @Setter
@@ -12,6 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Table(name = "PESSOA",uniqueConstraints = @UniqueConstraint(columnNames = "CPF"))
 public class Pessoa {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -19,10 +22,9 @@ public class Pessoa {
     private String nome;
     @Column(name = "CPF")
     private String cpf;
-    @Column(name = "DATA_DE_NASCIMENTO")
-    private Date DataNascimento;
     @Column(name = "IDADE")
-    private Long Idade;
+    private Long idade;
     @Column(name = "EXCLUIDO")
     private Boolean ehExcluido;
+
 }

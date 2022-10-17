@@ -11,7 +11,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class erroPadrao implements Serializable {
+public class ErroPadrao implements Serializable {
     private Integer status;
     private String mensagem;
 }

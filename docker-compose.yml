@@ -8,4 +8,4 @@ services:
       MYSQL_ROOT_PASSWORD: ayrtondocker
       MYSQL_DATABASE: dockerdatabase
     ports:
-      - 3306:3306
+      - "3306:3306"

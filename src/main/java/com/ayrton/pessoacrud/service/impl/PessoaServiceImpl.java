@@ -1,8 +1,9 @@
-package com.ayrton.pessoacrud.service.Impl;
+package com.ayrton.pessoacrud.service.impl;
 
 import com.ayrton.pessoacrud.model.Pessoa;
 import com.ayrton.pessoacrud.repository.PessoaRepository;
 import com.ayrton.pessoacrud.service.PessoaService;
+import lombok.Getter;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,9 @@ public class PessoaServiceImpl implements PessoaService {
 
     public static final String RECURSO_NAO_ENCONTRADO = "Recurso não encontrado.";
     @Autowired
+    @Getter
     private PessoaRepository pessoaRepository;
+
 
     @Override
     public Pessoa buscarPorId(Long id) {
